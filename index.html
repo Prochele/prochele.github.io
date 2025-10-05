@@ -1,376 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prochele — Building Simple, Reliable Software</title>
-  <meta name="description" content="Prochele builds simple, reliable software and web solutions for startups and SMEs. We ship MVPs fast, modernize legacy stacks, and design clean UX.">
-  <meta name="keywords" content="Prochele, software development, web development, MVP, UI/UX, India">
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Prochele — Building Simple, Reliable Software">
-  <meta property="og:description" content="Simple, reliable software. MVPs, web apps, and clean UX for startups and SMEs.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://prochele.com/">
-  <meta property="og:image" content="https://prochele.com/og-image.jpg"> <!-- replace when ready -->
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicon (replace with your real files when ready) -->
-  <link rel="icon" href="/favicon.ico">
-
-  <!-- Fonts (optional). Remove if you want only system fonts. -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prochele Software Solutions Pvt. Ltd.</title>
   <style>
-    :root{
-      --bg: #0b1020;
-      --surface: #121939;
-      --surface-2:#0f1530;
-      --text: #e6e9f5;
-      --muted:#aab0c5;
-      --brand:#5dd6c0;   /* teal */
-      --brand-2:#7aa2ff; /* indigo */
-      --ring: rgba(125, 211, 252, .5);
-      --maxw: 1100px;
-      --pad: 20px;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
-      background: radial-gradient(1200px 600px at 80% -10%, #1f2b66 0%, rgba(31,43,102,0) 60%), var(--bg);
-      color:var(--text);
-      line-height:1.6;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      border-bottom: 2px solid #5e8ecc;
     }
-    a{color:var(--brand-2); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:var(--maxw); margin:0 auto; padding:0 var(--pad)}
-    .nav{
-      position:sticky; top:0; z-index:20; backdrop-filter: blur(8px);
-      background: linear-gradient(180deg, rgba(11,16,32,.85), rgba(11,16,32,.55));
-      border-bottom: 1px solid rgba(255,255,255,.06);
+    header img {
+      height: 60px;
     }
-    .nav-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
-    .logo{
-      width:32px; height:32px; border-radius:10px; display:inline-grid; place-items:center;
-      background:linear-gradient(135deg, var(--brand), var(--brand-2));
-      color:#081023; font-weight:800; box-shadow: var(--shadow);
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #3f71b8;
+      font-weight: 700;
     }
-    .nav-links{display:flex; gap:20px; align-items:center}
-    .nav-links a{color:var(--text); opacity:.9}
-    .btn{
-      display:inline-block; padding:10px 16px; border-radius:12px; font-weight:600;
-      background:linear-gradient(135deg, var(--brand), var(--brand-2));
-      color:#081023; border:0; cursor:pointer; box-shadow: var(--shadow);
+    nav a:hover {
+      text-decoration: underline;
     }
-    .btn.secondary{
-      background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.12)
+
+    .hero-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2e2424;
+      margin-top: 40px;
+	  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
-    .hero{
-      padding:88px 0 48px; text-align:center; position:relative;
+
+    .banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #5e8ecc;
+      padding: 40px 60px;
+      margin: 30px 0;
     }
-    .hero h1{
-      font-size: clamp(28px, 4.5vw, 56px);
-      line-height:1.1; margin:12px 0 12px;
-      background: linear-gradient(180deg, #fff, #cfe6ff);
-      -webkit-background-clip: text; background-clip:text; color: transparent;
+
+    .banner img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-    .subtitle{color:var(--muted); max-width:820px; margin:0 auto 28px}
-    .hero-cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
-    .card-grid{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    .banner-text {
+      width: 50%;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 2.2rem;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
-    .card{
-      /*background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));*/
-      border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:20px;
-      box-shadow: var(--shadow);
+
+    section {
+      padding: 10px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    .card h3{margin:.2rem 0 .4rem}
-    .eyebrow{font-size: 2rem; text-transform:uppercase; letter-spacing:.12em; color:var(--brand); font-weight:700}
-    section{padding:56px 0}
-    .two-col{display:grid; gap:24px; grid-template-columns: 1.2fr 1fr}
-    @media (max-width: 900px){ .two-col{grid-template-columns:1fr} }
-    .list{margin:10px 0 0; padding-left:18px}
-    .chip{
-      display:inline-block; font-size:.9rem; padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.12); margin:4px 6px 0 0; color:var(--muted)
+
+    section h2 {
+      color: #3f71b8;
+      border-bottom: 2px solid #5e8ecc;
+      display: inline-block;
+      margin-bottom: 6px;
+      margin-top: 15px;
     }
-    .footer{
-      border-top:1px solid rgba(255,255,255,.08);
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-      padding:24px 0; color:var(--muted); font-size:.95rem
+
+    section p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      line-height: 1.5;
     }
-    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; font-size:.95rem; background:rgba(255,255,255,.06); padding:2px 8px; border-radius:8px; border:1px solid rgba(255,255,255,.1)}
-    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
-    .contact-card input, .contact-card textarea{
-      width:100%; background:var(--surface-2); color:var(--text); border:1px solid rgba(255,255,255,.12);
-      border-radius:12px; padding:12px 14px; outline: none;
+
+    footer {
+      background-color: #3f71b8;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 20px;
     }
-    .contact-card input:focus, .contact-card textarea:focus{box-shadow: 0 0 0 6px var(--ring)}
-    .notice{
-      background: #052a21; border:1px solid rgba(93,214,192,.35); color:#c9fff3;
-      padding:14px 16px; border-radius:12px; margin: 18px 0
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
-  <script>
-    // Tiny smooth-scroll for same-page links
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('a[href^="#"]');
-      links.forEach(a => a.addEventListener('click', e => {
-        const id = a.getAttribute('href').replace('#','');
-        const el = document.getElementById(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
-      }));
-    });
-  </script>
-
-  <!-- Schema.org Organization (edit details as needed) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Prochele",
-    "url": "https://prochele.com/",
-    "logo": "https://prochele.com/assets/logo.png",
-    "sameAs": [
-      "https://github.com/your-username",
-      "https://www.linkedin.com/company/prochele"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "email": "info@prochele.com",
-      "areaServed": ["IN","ID","SG","MY","AE"]
-    }]
-  }
-  </script>
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav class="nav" aria-label="Main">
-    <div class="container nav-inner">
-      <a class="brand" href="#" aria-label="Prochele home">
-  <img src="assets/logo.png" alt="Prochele Logo" style="height:32px; width:auto; border-radius:8px;">
-  <span>PROCHELE</span>
-</a>
-
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <span class="eyebrow">PROCHELE SOFTWARE SOLUTIONS PRIVATE LIMITED</span>
-      <h1>This website is under construction</h1>
-      <p class="subtitle">
-        We are a startup focused on delivering modern software solutions for startups and SMEs.
-Our mission is to help teams move faster by building clean, scalable, and reliable technology.
-      </p>
-      <!--div class="hero-cta">
-        <a class="btn" href="#contact">Start a project</a>
-        <a class="btn secondary" href="#services" aria-label="See our services">See services</a>
-    </div-->
-    </div>
+  <header>
+    <img src="assets/Prochele_Logo_Full001.jpg" alt="Prochele Logo" />
+    <nav>
+      <a href="#who">Who we are</a>
+      <a href="#what">What we are</a>
+      <a href="#services">Services</a>
+      <a href="#product">Product</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
   </header>
-<!-- ELDERLY SERVICES BANNER -->
-<section style="
-  background: linear-gradient(135deg, #e6f7f4 0%, #d0ebff 100%);
-  padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-">
-  <div style="max-width: 900px; margin: 2 auto; text-align: center;">
-    <h2 style="font-size: 2rem; color: #222; margin-bottom: 16px;">
-      Caring for the Elderly, Powered by Technology
-    </h2>
-    <p style="font-size: 1.2rem; color: #555; margin-bottom: 24px;">
-      Our mobile app connects families in India with trusted elderly care services.
-    </p>
-    <!--#contact" style="
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      background: linear-gradient(135deg, #5dd6c0, #7aa2ff);
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    ">
-      Learn More
-  </a-->
+
+  <div class="hero-title">
+    PROCHELE SOFTWARE SOLUTIONS PRIVATE LIMITED
   </div>
-</section>
 
-  <!-- TRUST / QUICK CARDS -->
-  <!--section aria-labelledby="trust">
-    <div class="container card-grid">
-      <article class="card">
-        <h3>Fast MVPs</h3>
-        <p>Validate ideas quickly: auth, dashboards, payments, and APIs in weeks—not months.</p>
-      </article>
-      <article class="card">
-        <h3>Modern Web</h3>
-        <p>Responsive, accessible, SEO-friendly websites that feel great and load fast.</p>
-      </article>
-      <article class="card">
-        <h3>Scalable Backends</h3>
-        <p>Solid API design, security best practices, monitoring, and documentation by default.</p>
-      </article>
-      <article class="card">
-        <h3>Ongoing Care</h3>
-        <p>Maintenance, performance tuning, and small feature iterations as you grow.</p>
-      </article>
+  <div class="banner">
+    <img src="assets/family004.jpg" alt="Family Photo Banner" />
+    <div class="banner-text">
+      We are focused on delivering modern software solutions that empower families and businesses through technology.
     </div>
-</section-->
-
-  <!-- SERVICES -->
-  <!--section id="services" aria-labelledby="services-title">
-    <div class="container two-col">
-      <div>
-        <span class="eyebrow" id="services-title">Services</span>
-        <h2>What we do</h2>
-        <p>We partner with founders and teams to ship outcomes, not just code.</p>
-        <ul class="list">
-          <li><strong>Product MVPs:</strong> auth, billing, CRUD, dashboards, analytics</li>
-          <li><strong>Websites:</strong> marketing sites, docs portals, SEO setup</li>
-          <li><strong>APIs & Integrations:</strong> REST/GraphQL, webhooks, payment gateways</li>
-          <li><strong>UI/UX:</strong> design systems, component libraries, handoffs</li>
-          <li><strong>Modernization:</strong> migrate legacy flows to modern stacks</li>
-        </ul>
-        <div>
-          <span class="chip">React / Next.js</span>
-          <span class="chip">Node / Python</span>
-          <span class="chip">Postgres</span>
-          <span class="chip">Tailwind</span>
-          <span class="chip">GitHub Actions</span>
-    </div>
-      </div>
-      <!--aside class="card">
-        <h3>Engagement models</h3>
-        <p><strong>Fixed-scope</strong> for clear deliverables. <strong>Monthly retainers</strong> for roadmap work. <strong>Sprint</strong> boosts for deadlines.</p>
-        <div class="notice">
-          <strong>Tip:</strong> If hosting on GitHub Pages, add a <span class="kbd">CNAME</span> file with <span class="kbd">prochele.com</span> and set A/CNAME records in GoDaddy.
-        </div>
-        <p><a href="#contact">Let’s plan your build →</a></p>
-  </aside>
-    </div>
-</section-->
-
-  <!-- WORK / HIGHLIGHTS -->
-  <!--section id="work" aria-labelledby="work-title">
-    <div class="container">
-      <span class="eyebrow" id="work-title">Selected work</span>
-      <h2>Recent highlights</h2>
-      <div class="card-grid" role="list">
-        <article class="card" role="listitem">
-          <h3>Inventory Lite</h3>
-          <p>Simple stock tracking for a retail chain; shipped MVP in 3 weeks with admin & reports.</p>
-        </article>
-        <article class="card" role="listitem">
-          <h3>Docs Portal</h3>
-          <p>Developer docs site with full-text search and versioned content.</p>
-        </article>
-        <article class="card" role="listitem">
-          <h3>Payments API</h3>
-          <p>Unified gateway abstraction with retries, webhooks, and dashboards.</p>
-        </article>
-      </div>
   </div>
-  </section-->
 
-  <!-- ABOUT -->
-  <section id="about" aria-labelledby="about-title">
-    <div class="container two-col">
-      <div>
-        <span class="eyebrow" id="about-title">About Prochele</span>
-        <h2>Small team. Senior hands.</h2>
-        <p>We are researchers, software engineers, and designers who care about clarity, speed, and reliability. We keep teams small and communication direct so decisions are fast and context is shared.</p>
-        <p>Work with us from anywhere. We primarily serve India & Indonesia, and collaborate across time zones.</p>
-      </div>
-      <div class="card">
-        <h3>Principles</h3>
-        <ul class="list">
-          <li><strong>Ship value early.</strong> Useful beats perfect.</li>
-          <li><strong>Choose boring tech wisely.</strong> Stability first.</li>
-          <li><strong>Design for humans.</strong> Accessible, readable, responsive.</li>
-        </ul>
-      </div>
-    </div>
+  <section id="who">
+    <h2>Who we are</h2>
+    <p>Prochele Software Solutions Pvt. Ltd. is a team of passionate developers, designers, and researchers dedicated to building scalable, reliable, and human-centered digital solutions.</p>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" aria-labelledby="contact-title">
-    <div class="container two-col">
-      <div>
-        <span class="eyebrow" id="contact-title">Contact</span>
-        <h2>Tell us about your project</h2>
-        <p>Email us or use the form. We’ll reply within 1–2 business days.</p>
-        <p><strong>Email:</strong> <a href="mailto:info@prochele.com">info@prochele.com</a></p>
-        <p><strong>Locations:</strong> Chennai</p>
-        <p><strong>Careers:</strong> <a href="mailto:careers@prochele.com">careers@prochele.com</a></p>
-      </div>
-      <form class="card contact-card" action="https://formspree.io/f/your-id" method="POST">
-        <!-- Replace action with your Formspree / Basin / Netlify form endpoint.
-             Or change to mailto:info@prochele.com if you prefer email. -->
-        <label>
-          <span class="sr-only">Your name</span>
-          <input name="name" type="text" placeholder="Your name" required>
-        </label><br><br>
-        <label>
-          <span class="sr-only">Your email</span>
-          <input name="email" type="email" placeholder="you@example.com" required>
-        </label><br><br>
-        <label>
-          <span class="sr-only">Message</span>
-          <textarea name="message" rows="5" placeholder="What do you want to build?" required></textarea>
-        </label><br><br>
-        <button class="btn" type="submit">Send message</button>
-      </form>
-    </div>
+  <section id="what">
+    <h2>What we are</h2>
+    <p>We are a startup driven by empathy and innovation, connecting families and improving care experiences through mobile and web technology. We primarily serve India and Indonesia.</p>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container" style="display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap">
-      <div>© <span id="y"></span> Prochele. All rights reserved.</div>
-      <div>
-        <a href="#about">About</a> · <a href="#services">Services</a> · <a href="#contact">Contact</a>
-      </div>
+  <section id="services">
+    <h2>Services</h2>
+    <p>We offer software development, UI/UX design, API integration, and mobile app solutions. Our focus is on building systems that are fast, simple, and secure.</p>
+  </section>
+
+  <section id="product">
+    <h2>Product</h2>
+    <p>Our flagship mobile app helps families in India connect with trusted elderly care providers, promoting safety, communication, and peace of mind.</p>
+  </section>
+
+  <section id="careers">
+    <h2>Careers</h2>
+    <p>We welcome professionals who are passionate about technology and care innovation. Write to us at <a href="mailto:careers@prochele.com">careers@prochele.com</a>.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email us at <a href="mailto:info@prochele.com">info@prochele.com</a></p>
+    <p>Location: Chennai, India.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Prochele Software Solutions Pvt. Ltd. All rights reserved.</p>
+    <div>
+      <a href="#who">About</a> ·
+      <a href="#services">Services</a> ·
+      <a href="#contact">Contact</a>
     </div>
   </footer>
-
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
