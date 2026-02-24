@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELDARA Plans</title>
+
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+.plan-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.plan-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.plan-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.plan-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.plan-card ul {
+  padding-left: 18px;
+}
+
+.plan-card li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.role-section {
+  margin-top: 60px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="plan-container">
+
+<h1 style="text-align:center;">ELDARA Subscription Plans</h1>
+
+<div class="plan-grid">
+
+<div class="plan-card">
+<div class="plan-title">🟢 Basic (Self)</div>
+<ul>
+<li>1 PT Profile (Self)</li>
+<li>1 Mobile Login</li>
+<li>Add & Schedule Medicines</li>
+<li>Add Appointments</li>
+<li>Add Vitals</li>
+<li>Add Daily Activities</li>
+<li>Add 1 Caretaker</li>
+</ul>
+</div>
+
+<div class="plan-card">
+<div class="plan-title">🔵 Standard (Self & Family)</div>
+<ul>
+<li>2 PT Profiles (Self + 1)</li>
+<li>2 Mobile Logins</li>
+<li>Advanced Medicine Adherence</li>
+<li>Add 2 Caretakers</li>
+<li>Monthly Health Summary</li>
+</ul>
+</div>
+
+<div class="plan-card">
+<div class="plan-title">🟣 Premium (Family)</div>
+<ul>
+<li>Up to 5 PT Profiles</li>
+<li>Multiple Mobile Logins</li>
+<li>Weekly Health Reports</li>
+<li>Emergency Alert Included</li>
+<li>Priority Support</li>
+</ul>
+</div>
+
+<div class="plan-card">
+<div class="plan-title">🟡 Caretaker Pro</div>
+<ul>
+<li>KYC Mandatory</li>
+<li>Operate Assigned PT Only</li>
+<li>Log Medicines</li>
+<li>Add Vitals</li>
+<li>Add Appointment Logs</li>
+<li>Add Daily Activities</li>
+</ul>
+</div>
+
+</div>
+
+<div class="role-section">
+<h2>Role Definitions</h2>
+<ul>
+<li><strong>PTA (Patron Admin)</strong> – Full control over PT profiles and caretaker assignment.</li>
+<li><strong>PT (Patron)</strong> – Can view own medical data and mark medicine as taken.</li>
+<li><strong>CT (Caretaker)</strong> – Can operate only on assigned PT. Cannot modify prescriptions.</li>
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>
