@@ -1,122 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELDARA Plans</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ELDARA Subscription Plans</title>
 
-<link rel="stylesheet" href="assets/style.css">
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-.plan-container {
+:root {
+  --primary: #1C73E9;
+  --green: #2E7D32;
+  --blue: #1565C0;
+  --purple: #6A1B9A;
+  --orange: #F57C00;
+  --border: #E5E7EB;
+  --text: #35343D;
+  --bg: #F9FAFB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
   max-width: 1100px;
   margin: 60px auto;
   padding: 20px;
 }
 
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
 .plan-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .plan-card {
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 12px;
-  padding: 20px;
-  transition: 0.3s;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 25px;
+  transition: 0.3s ease;
 }
 
 .plan-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
 }
 
-.plan-title {
+.plan-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.title {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
-.plan-card ul {
+.description {
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #6B7280;
+}
+
+ul {
   padding-left: 18px;
+  margin: 0;
 }
 
-.plan-card li {
+li {
+  font-size: 13px;
   margin-bottom: 6px;
-  font-size: 14px;
 }
 
 .role-section {
-  margin-top: 60px;
+  margin-top: 70px;
+}
+
+.role-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.role-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.role-title {
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="plan-container">
+<div class="container">
 
-<h1 style="text-align:center;">ELDARA Subscription Plans</h1>
+<h1>ELDARA Subscription Plans</h1>
 
 <div class="plan-grid">
 
+<!-- BASIC -->
 <div class="plan-card">
-<div class="plan-title">🟢 Basic (Self)</div>
-<ul>
-<li>1 PT Profile (Self)</li>
-<li>1 Mobile Login</li>
-<li>Add & Schedule Medicines</li>
-<li>Add Appointments</li>
-<li>Add Vitals</li>
-<li>Add Daily Activities</li>
-<li>Add 1 Caretaker</li>
-</ul>
+  <div class="plan-header">
+    <div class="dot" style="background: var(--green);"></div>
+    <div class="title">Basic (Self)</div>
+  </div>
+  <div class="description">
+    Designed for individual users managing their own health independently. 
+    One mobile login with essential medicine and vitals tracking.
+  </div>
+  <ul>
+    <li>1 PT (Patron) Profile</li>
+    <li>1 Mobile Login</li>
+    <li>Add & Schedule Medicines</li>
+    <li>Add Appointments</li>
+    <li>Add Vitals</li>
+    <li>Add Daily Activities</li>
+    <li>Add 1 CT (Caretaker)</li>
+  </ul>
 </div>
 
+<!-- STANDARD -->
 <div class="plan-card">
-<div class="plan-title">🔵 Standard (Self & Family)</div>
-<ul>
-<li>2 PT Profiles (Self + 1)</li>
-<li>2 Mobile Logins</li>
-<li>Advanced Medicine Adherence</li>
-<li>Add 2 Caretakers</li>
-<li>Monthly Health Summary</li>
-</ul>
+  <div class="plan-header">
+    <div class="dot" style="background: var(--blue);"></div>
+    <div class="title">Standard (Self & Family)</div>
+  </div>
+  <div class="description">
+    Perfect for small families where one PTA manages self and one family member. 
+    Dual mobile access with advanced adherence tracking.
+  </div>
+  <ul>
+    <li>2 PT (Patron) Profiles</li>
+    <li>2 Mobile Logins</li>
+    <li>Advanced Medicine Adherence</li>
+    <li>Add 2 CT (Caretakers)</li>
+    <li>Monthly Health Summary</li>
+  </ul>
 </div>
 
+<!-- PREMIUM -->
 <div class="plan-card">
-<div class="plan-title">🟣 Premium (Family)</div>
-<ul>
-<li>Up to 5 PT Profiles</li>
-<li>Multiple Mobile Logins</li>
-<li>Weekly Health Reports</li>
-<li>Emergency Alert Included</li>
-<li>Priority Support</li>
-</ul>
+  <div class="plan-header">
+    <div class="dot" style="background: var(--purple);"></div>
+    <div class="title">Premium (Family)</div>
+  </div>
+  <div class="description">
+    Built for large families or NRIs managing multiple dependents. 
+    Includes reports, alerts, and priority support.
+  </div>
+  <ul>
+    <li>Up to 5 PT (Patron) Profiles</li>
+    <li>Multiple Mobile Logins</li>
+    <li>Weekly Health Reports</li>
+    <li>Emergency Alert Feature</li>
+    <li>Priority Support</li>
+    <li>Multiple CT (Caretakers)</li>
+  </ul>
 </div>
 
+<!-- CARETAKER -->
 <div class="plan-card">
-<div class="plan-title">🟡 Caretaker Pro</div>
-<ul>
-<li>KYC Mandatory</li>
-<li>Operate Assigned PT Only</li>
-<li>Log Medicines</li>
-<li>Add Vitals</li>
-<li>Add Appointment Logs</li>
-<li>Add Daily Activities</li>
-</ul>
+  <div class="plan-header">
+    <div class="dot" style="background: var(--orange);"></div>
+    <div class="title">Caretaker Pro</div>
+  </div>
+  <div class="description">
+    For professional caregivers assisting assigned patients. 
+    Requires KYC and allows operational logging only.
+  </div>
+  <ul>
+    <li>KYC Mandatory</li>
+    <li>Operate Assigned PT Only</li>
+    <li>Log Medicine Administration</li>
+    <li>Add Vitals</li>
+    <li>Add Appointment Logs</li>
+    <li>Add Daily Activities</li>
+  </ul>
 </div>
 
 </div>
+
+<!-- ROLE DEFINITIONS -->
 
 <div class="role-section">
 <h2>Role Definitions</h2>
-<ul>
-<li><strong>PTA (Patron Admin)</strong> – Full control over PT profiles and caretaker assignment.</li>
-<li><strong>PT (Patron)</strong> – Can view own medical data and mark medicine as taken.</li>
-<li><strong>CT (Caretaker)</strong> – Can operate only on assigned PT. Cannot modify prescriptions.</li>
-</ul>
+
+<div class="role-card">
+  <div class="role-title">PTA – Patron Admin</div>
+  The primary account holder who manages PT profiles, medicines, appointments, 
+  and assigns CTs within plan limits.
+</div>
+
+<div class="role-card">
+  <div class="role-title">PT – Patron</div>
+  A patient profile under a PTA account. 
+  Can view personal data and mark medicines as taken.
+</div>
+
+<div class="role-card">
+  <div class="role-title">CT – Caretaker</div>
+  A verified caregiver assigned by PTA. 
+  Can log vitals and activities but cannot modify prescriptions.
+</div>
+
 </div>
 
 </div>
