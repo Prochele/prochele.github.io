@@ -3,182 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon_io/favicon.ico">
-
-  <title>Prochele Software Solutions Pvt. Ltd.</title>
-  <style>
-    :root{
-      --brand-blue:#3f71b8;
-      --line-blue:#5e8ecc;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333;
-    }
-    /* Header & Nav */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 10px 40px;
-      border-bottom: 2px solid var(--line-blue);
-      flex-wrap: wrap;
-    }
-    header img { height: 60px; }
-    nav{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:14px; }
-    nav a {
-      text-decoration: none;
-      color: var(--brand-blue);
-      font-weight: 700;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    /* Title above banner */
-    .hero-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 800;
-      color: #2e2424;
-      margin-top: 40px;
-	  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Banner */
-    .banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      background-color: var(--line-blue);
-      padding: 40px 60px;
-      margin: 24px 0 16px 0;
-    }
-    .banner img {
-      width: 45%;
-      max-width: 700px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-    .banner-text {
-	    width: 50%;
-      color: #FFFFFF;
-      font-weight: 800;
-      font-size: 2.2rem;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Sections */
-    section { padding: 10px 40px; max-width: 1000px; margin: 0 auto; }
-    section + section{ margin-top: 6px; }
-    section h2 {
-      color: var(--brand-blue);
-      border-bottom: 2px solid var(--line-blue);
-      display: inline-block;
-      margin: 10px 0 6px 0;
-    }
-    section p { margin: 4px 0 6px 0; line-height: 1.5; }
-
-    /* Footer */
-    footer {
-      background-color: var(--brand-blue);
-      color: #fff;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 18px;
-    }
-    footer a { color: #fff; margin: 0 10px; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    /* ===================== Responsive ===================== */
-    @media (max-width: 1024px){
-      .banner{ padding: 32px 40px; }
-      .banner img{ width: 50%; }
-      .banner-text{ width: 48%; font-size: 1.4rem; }
-    }
-    @media (max-width: 768px){
-      header{ padding: 10px 20px; }
-      .hero-title{ font-size: 1.6rem; margin-top: 18px; }
-      .banner{ flex-direction: column; text-align:center; gap:16px; padding: 22px 18px; }
-      .banner img{ width: 92%; max-width: none; }
-      .banner-text{ width: 100%; font-size: 1.25rem; }
-      section{ padding: 10px 18px; }
-    }
-    @media (max-width: 480px){
-      nav{ justify-content:center; gap:10px; }
-      nav a{ font-size: 0.95rem; }
-      .banner-text{ font-size: 1.1rem; text-shadow: 1px 1px 2px rgba(0,0,0,.35); }
-      .hero-title{ font-size: 1.35rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/site.css" />
+  <title>Prochele Software Solutions Private Limited</title>
 </head>
 <body>
-  <header>
-    <img src="assets/Prochele_Logo_Full001.jpg" alt="Prochele Logo" />
-    <nav>
-      <a href="#who">Who we are</a>
-      <a href="#what">What we are</a>
-      <a href="#services">Services</a>
-      <a href="#product">Product</a>
-      <a href="#careers">Careers</a>
-      <a href="#contact">Contact Us</a>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Prochele home">
+      <img src="assets/Prochele_Logo_Full001.jpg" alt="Prochele Software Solutions" />
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="who-we-are.html">Who we are</a>
+      <a href="what-we-are.html">What we are</a>
+      <a href="services.html">Services</a>
+      <div class="nav-item">
+        <a class="nav-label" href="products-eldara.html">Products</a>
+        <div class="submenu" aria-label="Products submenu">
+          <a href="products-eldara.html">Healthcare App: ELDARA</a>
+        </div>
+      </div>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
-  <div class="hero-title">PROCHELE SOFTWARE SOLUTIONS PRIVATE LIMITED</div>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Software for care, compliance, and connected businesses.</h1>
+        <p>Prochele Software Solutions Private Limited builds practical software for families, healthcare support, and business operations, with a special focus on elderly care in India.</p>
+        <div class="hero-actions">
+          <a class="button" href="products-eldara.html">Explore ELDARA</a>
+          <a class="button secondary" href="services.html">View Services</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/eldara/eldara-banner.png" alt="ELDARA elder care app banner with feature screens" />
+      </div>
+    </section>
 
-  <div class="banner">
-    <img src="assets/family004.jpg" alt="Family Photo Banner" />
-    <div class="banner-text">
-      We are focused on delivering modern software solutions that empower families and businesses through technology.
-    </div>
-  </div>
+    <section class="content">
+      <h2 class="section-title">Technology shaped around real care needs</h2>
+      <p class="lede">Our team brings together software engineering, management research, health communication, and field experience to create digital products that are useful, secure, and easy to adopt.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Experienced team</h3>
+          <p>Led by senior IT professionals and researchers with doctorate-level expertise in management and health communication.</p>
+        </article>
+        <article class="card">
+          <h3>Healthcare product</h3>
+          <p>ELDARA helps families and caretakers coordinate medicine schedules, appointments, reminders, vitals, and wellness information.</p>
+        </article>
+        <article class="card">
+          <h3>Software services</h3>
+          <p>We develop mobile apps, web applications, business optimization tools, and compliance monitoring systems.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-  <section id="who">
-    <h2>Who we are</h2>
-    <p>Prochele Software Solutions Pvt. Ltd. is a team of passionate developers, designers, and researchers dedicated to building scalable, reliable, and human-centered digital solutions.</p>
-  </section>
-
-  <section id="what">
-    <h2>What we are</h2>
-    <p>We are a startup driven by empathy and innovation, connecting families and improving care experiences through mobile and web technology. We primarily serve India and Indonesia.</p>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <p>We offer software development, UI/UX design, API integration, and mobile app solutions. Our focus is on building systems that are fast, simple, and secure.</p>
-  </section>
-
-  <section id="product">
-    <h2>Product</h2>
-    <p>Our flagship mobile app helps families in India connect with trusted elderly care providers, promoting safety, communication, and peace of mind.</p>
-  </section>
-
-  <section id="careers">
-    <h2>Careers</h2>
-    <p>We welcome professionals who are passionate about technology and care innovation. Write to us at <a href="mailto:careers@prochele.com">careers@prochele.com</a>.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:info@prochele.com">info@prochele.com</a></p>
-    <p>Location: Chennai, India.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Prochele Software Solutions Pvt. Ltd. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>&copy; 2026 Prochele Software Solutions Private Limited. All rights reserved.</p>
     <div>
-      <a href="#who">About</a> ·
-      <a href="#services">Services</a> ·
-      <a href="#contact">Contact</a>
+      <a href="who-we-are.html">About</a> ·
+      <a href="services.html">Services</a> ·
+      <a href="contact.html">Contact</a>
     </div>
   </footer>
 </body>
 </html>
-
-
