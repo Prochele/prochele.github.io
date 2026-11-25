@@ -338,6 +338,12 @@ a {
   line-height: 1.45;
 }
 
+.current-shot img {
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
 .contact-lines {
   display: grid;
   gap: 10px;
